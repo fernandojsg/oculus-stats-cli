@@ -40,7 +40,7 @@ PerfStats.prototype = {
       variance: this.variance,
       standard_deviation: this.standard_deviation
     };
-  }  
+  }
 }
 
 module.exports = PerfStats;

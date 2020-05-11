@@ -1,6 +1,7 @@
 [
-	{"FPS":74,"Tear":0,"Early":50,"Stale":0,"Mem":1804,"App":5.11},
-	{"FPS":74,"Tear":0,"Early":50,"Stale":0,"Mem":1804,"App":5.11},
-	{"FPS":74,"Tear":0,"Early":50,"Stale":0,"Mem":1804,"App":5.11},
-	{"FPS":74,"Tear":0,"Early":50,"Stale":0,"Mem":1804,"App":5.11}
+	{"fps":72,"tear":0,"early":0,"stale":0,"mem":1804,"app":5.18},
+	{"fps":72,"tear":0,"early":0,"stale":0,"mem":1804,"app":5.18},
+	{"fps":72,"tear":0,"early":0,"stale":0,"mem":1804,"app":5.18},
+	{"fps":72,"tear":0,"early":0,"stale":0,"mem":1804,"app":5.18},
+	{"fps":72,"tear":0,"early":0,"stale":0,"mem":1804,"app":5.18}
 ]

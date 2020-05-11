@@ -19,17 +19,26 @@ program
 	.action(({}, {output}, logger) => {
 
 		let values = [];
+		let lastStats = null;
+		let initialized = false;
 
 		// Wait to start
 		console.log(`Press any key to ${chalk.yellow('start')} the recording`);
 		process.stdin.setRawMode(true);
 		process.stdin.resume();
 		process.stdin.on('data', () => {
+			if (initialized) {
+				return;
+			}
+
+			initialized = true;
 			let x = 0;
-			OculusVRAPI.init(line => {
-				console.log(line);
+			OculusVRAPI.init(true, (line, stats) => {
 				values.push(line);
-				process.stdout.write(`${JSON.stringify(line)} \r`);
+				console.log(line, ' '.repeat(20));
+				let results = {};
+				Object.keys(stats).forEach(name => results[name] = stats[name].mean);
+				process.stdout.write(`${JSON.stringify(results)} \r`);
 				x++;
 			});
 

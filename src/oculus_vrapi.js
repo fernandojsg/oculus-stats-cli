@@ -7,7 +7,9 @@ module.exports = {
   stats: {},
   name: 'oculus_vrapi',
   enabled: false,
-  init: function (onNewLine) {
+  init: function (enabled, onNewLine) {
+    this.enabled = enabled || false;
+
     var filter = ['FPS', 'Tear', 'Early', 'Stale', 'Mem', 'App'];
 
     filter.forEach(name => {
@@ -42,11 +44,11 @@ module.exports = {
         if (this.enabled) {
           this.stats[param[0].toLowerCase()].update(value);
         }
-        params[param[0]] = value;
+        params[param[0].toLowerCase()] = value;
       });
 
       if (onNewLine) {
-        onNewLine(params);
+        onNewLine(params, this.stats);
       }
       //@todo if verbose
       // console.log(this.enabled ? '' : 'Skipped', params);

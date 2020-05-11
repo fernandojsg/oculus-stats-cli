@@ -1,6 +1,6 @@
 {
   "name": "oculus-stats-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "OculusVR Stats client helper",
   "main": "src/index.js",
   "bin": {

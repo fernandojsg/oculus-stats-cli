@@ -35,7 +35,7 @@ program
 			let x = 0;
 			OculusVRAPI.init(true, (line, stats) => {
 				values.push(line);
-				console.log(line, ' '.repeat(20));
+				console.log(line, ' '.repeat(80));
 				let results = {};
 				Object.keys(stats).forEach(name => results[name] = stats[name].mean);
 				process.stdout.write(`${JSON.stringify(results)} \r`);
